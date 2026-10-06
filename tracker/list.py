@@ -1,10 +1,6 @@
-import json
-
+from tracker.read import readjson
 def list():
-    with open("tracker.json", "r") as file:
-          track = json.load(file)
-
-
+    track = readjson()
     print(f"{'ID':<5} {'Date':<10} {'Description':<15} {'Amount':<10}")
     print("-" * 50)
 

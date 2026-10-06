@@ -1,10 +1,10 @@
-import json
 from datetime import datetime
+from tracker.read import readjson
 
 def summary(month):
     total = 0
     with open("tracker.json", "r") as file:
-       track = json.load(file)
+       track = readjson()
     
     if month is not None:
         flag = 0

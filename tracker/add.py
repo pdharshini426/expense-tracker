@@ -1,14 +1,12 @@
 import json
 from datetime import date
-
+from tracker.read import readjson
 
 def add(description,amount):
-    track = []
-    with open("tracker.json", "r") as file:
-      track = json.load(file)
-      if len(track)==0:
+    track = readjson()  
+    if len(track)==0:
         new_id = 1
-      else:
+    else:
         new_id = track[-1]["id"] + 1
 
 
